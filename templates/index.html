@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+
+    <table class = "table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {% for member in list2 %}
+                <tr>
+                    <td>{{ member["symbol"] }}</td>
+                    <td>{{ member["name"] }}</td>
+                    <td>{{ member["shares"] }}</td>
+                    <td>{{ member["price"] }} </td>
+                    <td>${{ member["total"] }}</td>
+                </tr>
+            {% endfor %}
+                <tr>
+                    <td colspan="1"></td>
+                    <td colspan="2"></td>
+                    <td>Cash</td>
+                    <td>${{ sum1 }}</td>
+                </tr>
+                <tr>
+                    <td colspan="1"></td>
+                    <td colspan="2"></td>
+                    <td>TOTAL</td>
+                    <td>${{ total }}</td>
+                </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

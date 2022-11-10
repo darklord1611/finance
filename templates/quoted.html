@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+        <div class="mb-3">
+            <h1>Price of {{ list["name"] }}'s stock({{ list["symbol"] }}) is {{ list["price"] }} USD</h1>
+        </div>
+{% endblock %}
